@@ -57,6 +57,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # foreman to start multiple processes together, within bin/dev
+  gem "foreman"
+  gem "listen", "~> 3.9"
 end
 
 group :test do

@@ -1,0 +1,7 @@
+{
+  "name": "Rails 8 Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "web",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose"
+}

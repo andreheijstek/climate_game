@@ -1,0 +1,25 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: ["/app/.devcontainer/entrypoint.sh"]
+    command: >
+      bash -c "
+        bundle check || bundle install &&
+        bin/dev
+      "
+    volumes:
+      - ..:/app:cached
+      - bundle_cache:/usr/local/bundle
+      - bootsnap_cache:/app/tmp/cache
+    ports:
+      - "3000:3000"
+    environment:
+      RAILS_ENV: development
+    tty: true
+    stdin_open: true
+
+volumes:
+  bundle_cache:
+  bootsnap_cache:

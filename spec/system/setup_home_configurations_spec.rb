@@ -1,9 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe "SetupHomeConfigurations", type: :system do
-  before do
-    driven_by(:rack_test)
-  end
+  it 'creates a new home' do
+    visit "/home_configurations/new"
 
-  pending "add some scenarios (or delete) #{__FILE__}"
+    HomeConfigurationPage.new.tap do |n|
+      n.home.set "thuis"
+      n.submit_button.click
+    end
+    visit '/home'
+    expect(page).to have_content ("thuis")
+  end
 end

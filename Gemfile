@@ -60,17 +60,18 @@ group :development do
   # foreman to start multiple processes together, within bin/dev
   gem "foreman"
   gem "listen", "~> 3.9"
+  gem "site_prism", "~> 5.1" # page object model
 end
 
 group :development, :test do
+  gem "capybara"
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem "shoulda-matchers"
+  gem "rails_helper"
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
   gem "selenium-webdriver"
-  gem "rack-test"
 end

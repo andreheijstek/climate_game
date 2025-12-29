@@ -8,6 +8,15 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
   npm \
   git \
   curl \
+  chromium \
+  chromium-driver \
+  libnss3 \
+  libatk-bridge2.0-0 \
+  libgtk-3-0 \
+  libxss1 \
+  libasound2 \
+  fonts-liberation \
+  ca-certificates \
   && rm -rf /var/lib/apt/lists/*
 
 # Yarn (Rails 8 assets)
@@ -19,6 +28,8 @@ ENV BUNDLE_PATH=/usr/local/bundle \
   BUNDLE_RETRY=3 \
   BUNDLE_WITHOUT="production" \
   BUNDLED_WITH=4.0.3
+  
+ENV SELENIUM_MANAGER_DISABLE=true
 
 # Installeer de juiste Bundler versie
 RUN gem install bundler -v 4.0.3

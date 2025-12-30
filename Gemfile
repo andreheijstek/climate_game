@@ -29,7 +29,7 @@ gem "solid_queue"
 gem "solid_cable"
 
 # Reduces boot times through caching; required in config/boot.rb
-# gem "bootsnap", require: false
+gem "bootsnap", require: false
 
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
 gem "kamal", require: false
@@ -52,6 +52,12 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  gem "capybara"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "shoulda-matchers"
+  gem "fasterer"
+  gem "reek"
 end
 
 group :development do
@@ -62,15 +68,6 @@ group :development do
   gem "listen", "~> 3.9"
   gem "site_prism", "~> 5.1" # page object model
   gem "overcommit", require: false
-end
-
-group :development, :test do
-  gem "capybara"
-  gem "rspec-rails"
-  gem "factory_bot_rails"
-  gem "shoulda-matchers"
-  gem "fasterer"
-  gem "reek"
 end
 
 group :test do

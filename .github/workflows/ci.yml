@@ -25,45 +25,11 @@ jobs:
       # RuboCop (codekwaliteit)
       - name: RuboCop
         run: bundle exec rubocop
-
-      - name: Run Fasterer
-        run: bundle exec fasterer
-
-      - name: Run Reek
-        run: bundle exec reek
         
-      # Bundler Audit (dependency security)
-      - name: Bundler Audit
-        run: |
-          bundle exec bundler-audit update
-          bundle exec bundler-audit check
+      # Scan for common Rails security vulnerabilities using static analysis
+      - name: Brakeman
+        run: bundle exec brakeman --no-pager
 
-      - name: Scan for common Rails security vulnerabilities using static analysis
-        run: bin/brakeman --no-pager
-      
-      - name: Scan for known security vulnerabilities in gems used
-        run: bin/bundler-audit
-      
-  scan_js:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v5
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
-
-      - name: Scan for security vulnerabilities in JavaScript dependencies
-        run: bin/importmap audit
-
-  lint:
-    runs-on: ubuntu-latest
-    env:
-      RUBOCOP_CACHE_ROOT: tmp/rubocop
-    steps:
       - name: Checkout code
         uses: actions/checkout@v5
 

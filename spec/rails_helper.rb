@@ -3,6 +3,7 @@
 ENV["RAILS_ENV"] ||= "test"
 
 require File.expand_path("../config/environment", __dir__)
+
 abort("The Rails environment is running in production!") if Rails.env.production?
 
 # require "support/rails_8_routes_patch"

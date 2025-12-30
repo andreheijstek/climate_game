@@ -17,6 +17,26 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+          
+      # Database voorbereiden (SQLite)
+      - name: Prepare database
+        run: bin/rails db:prepare
+
+      # RuboCop (codekwaliteit)
+      - name: RuboCop
+        run: bundle exec rubocop
+
+      - name: Run Fasterer
+        run: bundle exec fasterer
+
+      - name: Run Reek
+        run: bundle exec reek
+        
+      # Bundler Audit (dependency security)
+      - name: Bundler Audit
+        run: |
+          bundle exec bundler-audit update
+          bundle exec bundler-audit check
 
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager

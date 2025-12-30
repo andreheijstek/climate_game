@@ -1,0 +1,46 @@
+# .overcommit.yml
+PreCommit:
+  # Code style check
+  RuboCop:
+    enabled: true
+    command: ['bundle', 'exec', 'rubocop']
+    required_executable: 'bundle'
+    
+  Fasterer:
+    enabled: true
+    command: ['bundle', 'exec', 'fasterer']
+
+  Reek:
+    enabled: true
+    command: ['bundle', 'exec', 'reek']
+
+  # Run RSpec tests before commit
+  RSpec:
+    enabled: true
+    command: ['bundle', 'exec', 'rspec', '--fail-fast']
+    required_executable: 'bundle'
+
+  # Security scan with Brakeman
+  Brakeman:
+    enabled: true
+    command: ['bundle', 'exec', 'brakeman', '--quiet', '--no-pager']
+    required_executable: 'bundle'
+
+  # Vulnerable gem check
+  BundlerAudit:
+    enabled: true
+    command: ['bundle', 'exec', 'bundler-audit', 'check']
+    required_executable: 'bundle'
+
+PrePush:
+  # Optional: run RSpec on push as extra safety
+  RSpec:
+    enabled: true
+    command: ['bundle', 'exec', 'rspec', '--fail-fast']
+    required_executable: 'bundle'
+
+PostMerge:
+  RuboCop:
+    enabled: true
+    command: ['bundle', 'exec', 'rubocop']
+    required_executable: 'bundle'

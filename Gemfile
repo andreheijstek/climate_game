@@ -61,6 +61,7 @@ group :development do
   gem "foreman"
   gem "listen", "~> 3.9"
   gem "site_prism", "~> 5.1" # page object model
+  gem "overcommit", require: false
 end
 
 group :development, :test do
@@ -68,6 +69,8 @@ group :development, :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem "shoulda-matchers"
+  gem "fasterer"
+  gem "reek"
 end
 
 group :test do

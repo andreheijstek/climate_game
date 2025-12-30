@@ -3,11 +3,9 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
-    command: >
-      bash -c "
-        bundle check || bundle install &&
-        bin/dev
-      "
+    command: sleep infinity
+    stdin_open: true
+    tty: true
     volumes:
       - type: bind
         source: ..
@@ -24,8 +22,6 @@ services:
       RAILS_MAX_THREADS: 5
       RAILS_MIN_THREADS: 1
       WEB_CONCURRENCY: 0
-    tty: true
-    stdin_open: true
 
 volumes:
   bundle_cache:

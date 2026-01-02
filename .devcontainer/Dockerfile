@@ -41,5 +41,6 @@ WORKDIR /app
 COPY Gemfile Gemfile.lock ./
 # Installeer gems
 RUN bundle install
+COPY load-profile.sh /etc/profile.d
 
 EXPOSE 3000

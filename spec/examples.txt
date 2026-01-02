@@ -1,0 +1,31 @@
+example_id                                           | status  | run_time        |
+---------------------------------------------------- | ------- | --------------- |
+./spec/helpers/homes_helper_spec.rb[1:1]             | pending | 0.00002 seconds |
+./spec/models/home_spec.rb[1:1]                      | pending | 0.00001 seconds |
+./spec/requests/homes_spec.rb[1:1:1]                 | pending | 0.00086 seconds |
+./spec/requests/homes_spec.rb[1:2:1]                 | pending | 0.00079 seconds |
+./spec/requests/homes_spec.rb[1:3:1]                 | passed  | 0.00296 seconds |
+./spec/requests/homes_spec.rb[1:4:1]                 | pending | 0.00075 seconds |
+./spec/requests/homes_spec.rb[1:5:1:1]               | pending | 0.00122 seconds |
+./spec/requests/homes_spec.rb[1:5:1:2]               | pending | 0.00083 seconds |
+./spec/requests/homes_spec.rb[1:5:2:1]               | pending | 0.00194 seconds |
+./spec/requests/homes_spec.rb[1:5:2:2]               | pending | 0.00078 seconds |
+./spec/requests/homes_spec.rb[1:6:1:1]               | pending | 0.0008 seconds  |
+./spec/requests/homes_spec.rb[1:6:1:2]               | pending | 0.00078 seconds |
+./spec/requests/homes_spec.rb[1:6:2:1]               | pending | 0.00072 seconds |
+./spec/requests/homes_spec.rb[1:7:1]                 | pending | 0.00082 seconds |
+./spec/requests/homes_spec.rb[1:7:2]                 | pending | 0.00078 seconds |
+./spec/routing/homes_routing_spec.rb[1:1:1]          | passed  | 0.00113 seconds |
+./spec/routing/homes_routing_spec.rb[1:1:2]          | passed  | 0.00086 seconds |
+./spec/routing/homes_routing_spec.rb[1:1:3]          | passed  | 0.00125 seconds |
+./spec/routing/homes_routing_spec.rb[1:1:4]          | passed  | 0.00084 seconds |
+./spec/routing/homes_routing_spec.rb[1:1:5]          | passed  | 0.00378 seconds |
+./spec/routing/homes_routing_spec.rb[1:1:6]          | passed  | 0.0014 seconds  |
+./spec/routing/homes_routing_spec.rb[1:1:7]          | passed  | 0.00119 seconds |
+./spec/routing/homes_routing_spec.rb[1:1:8]          | passed  | 0.03681 seconds |
+./spec/smoke/boot_spec.rb[1:1]                       | passed  | 0.00121 seconds |
+./spec/system/setup_home_configurations_spec.rb[1:1] | passed  | 0.77469 seconds |
+./spec/views/homes/edit.html.erb_spec.rb[1:1]        | passed  | 0.05787 seconds |
+./spec/views/homes/index.html.erb_spec.rb[1:1]       | failed  | 0.00379 seconds |
+./spec/views/homes/new.html.erb_spec.rb[1:1]         | passed  | 0.00289 seconds |
+./spec/views/homes/show.html.erb_spec.rb[1:1]        | passed  | 0.03906 seconds |

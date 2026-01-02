@@ -40,11 +40,9 @@ RSpec.describe "/homes", type: :request do
     end
   end
 
-  describe "GET /new" do
-    it "renders a successful response" do
-      get new_home_url
-      # expect(response).to be_successful
-    end
+  it "returns http success" do
+    get new_home_url, headers: { "ACCEPT" => "text/html" }
+    expect(response).to have_http_status(:ok)
   end
 
   describe "GET /edit" do

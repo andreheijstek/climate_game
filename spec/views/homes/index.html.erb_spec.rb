@@ -12,9 +12,8 @@ RSpec.describe "homes/index", type: :view do
     ])
   end
 
-  # it "renders a list of homes" do
-  #   render
-  #   cell_selector = 'div>p'
-  #   assert_select cell_selector, text: Regexp.new("Description".to_s), count: 2
-  # end
+  it "renders a list of homes" do
+    render
+    assert_select "strong", text: "Description:", count: 2
+  end
 end

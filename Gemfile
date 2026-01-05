@@ -58,6 +58,7 @@ group :development, :test do
   gem "shoulda-matchers"
   gem "fasterer"
   gem "reek"
+  gem "site_prism", "~> 5.1" # page object model
 end
 
 group :development do
@@ -66,7 +67,6 @@ group :development do
   # foreman to start multiple processes together, within bin/dev
   gem "foreman"
   gem "listen", "~> 3.9"
-  gem "site_prism", "~> 5.1" # page object model
   gem "overcommit", require: false
 end
 

@@ -11,7 +11,6 @@ RSpec.describe "floors/new", type: :view do
     render
 
     assert_select "form[action=?][method=?]", floors_path, "post" do
-
       assert_select "input[name=?]", "floor[name]"
     end
   end

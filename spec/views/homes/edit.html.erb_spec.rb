@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "homes/edit", type: :view do
   let(:home) {
     Home.create!(
-      description: "MyString"
+      name: "MyString"
     )
   }
 
@@ -15,7 +15,7 @@ RSpec.describe "homes/edit", type: :view do
     render
 
     assert_select "form[action=?][method=?]", home_path(home), "post" do
-      assert_select "input[name=?]", "home[description]"
+      assert_select "input[name=?]", "home[name]"
     end
   end
 end

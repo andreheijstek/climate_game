@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "homes/show", type: :view do
+RSpec.describe "floors/show", type: :view do
   before(:each) do
-    assign(:home, Home.create!(
+    assign(:floor, Floor.create!(
       name: "Name"
     ))
   end

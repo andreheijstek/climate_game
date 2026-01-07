@@ -15,10 +15,11 @@ PreCommit:
 
   Reek:
     enabled: true
-    command:
-      - bundle
-      - exec
-      - reek
+    # command:
+      # - bundle
+      # - exec
+      # - reek
+    command: ['/usr/local/bin/bundle', 'exec', 'reek']
 
   RSpec:
     enabled: true

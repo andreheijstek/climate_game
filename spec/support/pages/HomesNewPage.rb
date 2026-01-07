@@ -2,11 +2,11 @@
 class HomesNewPage < SitePrism::Page
   set_url "/homes/new"
 
-  element :description, "#home_description"
+  element :name, "#home_name"
   element :submit, 'input[type="submit"][value="Create Home"]'
 
-  def create_home(description:)
-    self.description.set(description)
+  def create_home(name:)
+    self.name.set(name)
     submit.click
   end
 end

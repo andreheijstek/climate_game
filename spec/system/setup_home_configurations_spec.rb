@@ -4,7 +4,7 @@ RSpec.describe "SetupHomeConfigurations", type: :system do
   it 'creates a new home' do
     hnp = HomesNewPage.new
     hnp.load
-    hnp.create_home(description: "Thuis")
+    hnp.create_home(name: "Thuis")
 
     expect(page).to have_content ("Thuis")
   end

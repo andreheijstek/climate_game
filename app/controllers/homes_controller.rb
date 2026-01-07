@@ -60,11 +60,11 @@ class HomesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_home
-      @home = Home.find(params.expect(:id))
+      @home = Home.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def home_params
-      params.expect(home: [ :description ])
+      params.require(home).permit(:name)
     end
 end

@@ -1,10 +1,6 @@
-require 'rails_helper'
-
 RSpec.describe "floors/edit", type: :view do
   let(:floor) {
-    Floor.create!(
-      name: "MyString"
-    )
+    create(:floor, name: "MyString")
   }
 
   before(:each) do

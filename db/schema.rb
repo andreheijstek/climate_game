@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_01_07_085138) do
+ActiveRecord::Schema[8.1].define(version: 2026_01_10_173628) do
   create_table "floors", force: :cascade do |t|
     t.datetime "created_at", null: false
+    t.integer "home_id", null: false
     t.string "name"
     t.datetime "updated_at", null: false
+    t.index ["home_id"], name: "index_floors_on_home_id"
   end
 
   create_table "homes", force: :cascade do |t|
@@ -22,4 +24,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_01_07_085138) do
     t.string "name"
     t.datetime "updated_at", null: false
   end
+
+  add_foreign_key "floors", "homes"
 end

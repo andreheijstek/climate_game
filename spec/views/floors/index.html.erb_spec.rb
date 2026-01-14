@@ -1,14 +1,8 @@
-require 'rails_helper'
-
 RSpec.describe "floors/index", type: :view do
   before(:each) do
     assign(:floors, [
-      Floor.create!(
-        name: "Name"
-      ),
-      Floor.create!(
-        name: "Name"
-      )
+      create(:floor, name: "Name"),
+      create(:floor, name: "Name")
     ])
   end
 

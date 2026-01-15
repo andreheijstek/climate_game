@@ -1,0 +1,12 @@
+exclude_paths:
+  - db/migrate
+  - db/schema.rb
+  - config/routes.rb
+  - bin/
+
+directories:
+  "app/controllers":
+    DuplicateMethodCall:
+      enabled: false
+    TooManyStatements:
+      max_statements: 15

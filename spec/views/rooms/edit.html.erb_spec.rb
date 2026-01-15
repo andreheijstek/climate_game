@@ -1,10 +1,6 @@
-require 'rails_helper'
-
 RSpec.describe "rooms/edit", type: :view do
   let(:room) {
-    Room.create!(
-      name: "MyString"
-    )
+    create(:room, name: "MyString")
   }
 
   before(:each) do

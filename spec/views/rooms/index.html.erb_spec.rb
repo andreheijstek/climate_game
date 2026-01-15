@@ -3,12 +3,8 @@ require 'rails_helper'
 RSpec.describe "rooms/index", type: :view do
   before(:each) do
     assign(:rooms, [
-      Room.create!(
-        name: "Name"
-      ),
-      Room.create!(
-        name: "Name"
-      )
+      create(:room, name: "Name"),
+      create(:room, name: "Name")
     ])
   end
 

@@ -59,6 +59,7 @@ group :development, :test do
   gem "fasterer"
   gem "reek"
   gem "site_prism", "~> 5.1" # page object model
+  gem "launchy"
 end
 
 group :development do
@@ -73,4 +74,5 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "selenium-webdriver"
+  gem "database_cleaner-active_record"
 end

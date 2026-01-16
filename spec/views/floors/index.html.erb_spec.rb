@@ -8,6 +8,6 @@ RSpec.describe "floors/index", type: :view do
 
   it "renders a list of floors" do
     render
-    assert_select "strong", text: "Name:", count: 2
+    assert_select "strong", text: "Floorname:", count: 2
   end
 end

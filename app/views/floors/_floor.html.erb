@@ -3,9 +3,10 @@
     <strong>Floorname:</strong>
     <%= floor.name %>
   </div>
-  
+
   <div>
     <strong>Part of home:</strong>
-    <%= floor.home.name %>
+    <%= link_to floor.home.name, floor.home %>
+
   </div>
 </div>

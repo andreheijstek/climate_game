@@ -1,6 +1,8 @@
 RSpec.describe "floors/show", type: :view do
   before(:each) do
-    assign(:floor, create(:floor, name: "Name"))
+    @home = create(:home, name: "Thuis")
+    assign(:floor, create(:floor, name: "Name",
+    home: @home))
   end
 
   it "renders attributes in <p>" do
@@ -9,18 +11,16 @@ RSpec.describe "floors/show", type: :view do
   end
 
   it "shows the home this floor belongs to" do
-    floor = create(
-      :floor,
-      name: "begane grond",
-      home: create(:home, name: "Thuis")
-    )
     render
     expect(rendered).to include "Part of home"
-    expect(rendered).to include "MyString"
+    expect(rendered).to include "Thuis"
   end
 
-  # it "links back to the home" do
-  # end
+  it "links back to the home" do
+    render
+    puts rendered
+    expect(rendered).to have_link 'Thuis', href: home_path(@home)
+  end
   #
   # TODO: Refactor, repeating statements can move to before block
 end

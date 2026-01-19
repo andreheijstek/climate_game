@@ -18,7 +18,6 @@ RSpec.describe "floors/show", type: :view do
 
   it "links back to the home" do
     render
-    puts rendered
     expect(rendered).to have_link 'Thuis', href: home_path(@home)
   end
   #

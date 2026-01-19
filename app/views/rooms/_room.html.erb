@@ -1,7 +1,11 @@
 <div id="<%= dom_id room %>">
   <div>
-    <strong>Name:</strong>
+    <strong>Roomname:</strong>
     <%= room.name %>
   </div>
 
+  <div>
+    <strong>Part of floor:</strong>
+    <%= link_to room.floor.name, room.floor %>
+  </div>
 </div>

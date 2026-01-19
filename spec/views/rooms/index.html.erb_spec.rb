@@ -10,6 +10,6 @@ RSpec.describe "rooms/index", type: :view do
 
   it "renders a list of rooms" do
     render
-    assert_select "strong", text: "Name:", count: 2
+    assert_select "strong", text: "Roomname:", count: 2
   end
 end

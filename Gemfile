@@ -69,7 +69,7 @@ group :development do
   gem "web-console"
   # foreman to start multiple processes together, within bin/dev
   gem "foreman"
-  gem "listen", "~> 3.9"
+  gem "listen", "~> 3.10"
   gem "overcommit", require: false
 end
 

@@ -1,0 +1,45 @@
+/* ========== Labels ========== */
+
+form label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+/* ========== Inputs ========== */
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form textarea,
+form select {
+  @apply block w-full rounded-md border-gray-300 shadow-sm;
+  @apply focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm;
+}
+
+/* ========== Errors ========== */
+
+form .field-with-errors input,
+form .field-with-errors textarea,
+form .field-with-errors select {
+  @apply border-red-500 focus:border-red-500 focus:ring-red-500;
+}
+
+/* ========== Buttons ========== */
+
+form button[type="submit"] {
+  @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+}
+
+form button[type="submit"]:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* ========== Forms ========== */
+
+form {
+  @apply space-y-6;
+}
+
+.test-apply {
+  @apply text-blue-500;
+}

@@ -1,45 +1,44 @@
-/* ========== Labels ========== */
-
-form label {
+/* Labels */
+.form-label {
   @apply block text-sm font-medium text-gray-700 mb-1;
 }
 
-/* ========== Inputs ========== */
-
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form input[type="number"],
-form textarea,
-form select {
+/* Text inputs, email, number, password, textarea */
+.form-input {
   @apply block w-full rounded-md border-gray-300 shadow-sm;
   @apply focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm;
 }
 
-/* ========== Errors ========== */
-
-form .field-with-errors input,
-form .field-with-errors textarea,
-form .field-with-errors select {
-  @apply border-red-500 focus:border-red-500 focus:ring-red-500;
+/* Select dropdowns */
+.form-select {
+  @apply block w-full rounded-md border-gray-300 shadow-sm bg-white;
+  @apply focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm;
 }
 
-/* ========== Buttons ========== */
-
-form button[type="submit"] {
-  @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+/* Checkboxes and radio buttons */
+.form-checkbox,
+.form-radio {
+  @apply h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500;
 }
 
-form button[type="submit"]:disabled {
-  @apply opacity-50 cursor-not-allowed;
+/* Error messages */
+.form-error {
+  @apply text-red-500 text-sm mt-1;
 }
 
-/* ========== Forms ========== */
-
-form {
-  @apply space-y-6;
+/* Helper text or hints */
+.form-hint {
+  @apply text-gray-500 text-xs mt-1;
 }
 
-.test-apply {
-  @apply text-blue-500;
+/* Submit / buttons */
+.form-button {
+  @apply inline-flex justify-center rounded-md border border-transparent bg-indigo-600
+         py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700
+         focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+}
+
+/* Disabled buttons */
+.form-button:disabled {
+  @apply bg-gray-400 cursor-not-allowed;
 }

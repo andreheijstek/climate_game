@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Floor, type: :model do
   describe 'associations' do
     it { should have_many(:rooms).dependent(:destroy) }
+    it { should belong_to(:home) }
   end
 
   describe 'with rooms' do

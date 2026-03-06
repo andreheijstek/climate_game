@@ -60,7 +60,7 @@ group :development, :test do
   gem "shoulda-matchers"
   gem "fasterer"
   gem "reek"
-  gem "site_prism", "~> 5.1" # page object model
+  gem "site_prism", "~> 5.2" # page object model
   gem "launchy"
 end
 
